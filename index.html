@@ -513,9 +513,9 @@ body.dark-mode .cart-count {
     const loja=lojas.find(l=>l.id===cart[0].shopId);
     alert(
       "Pedido registrado!"+
-      "Loja: "+loja.nome+""+
-      "Total: "+money(total)+""+
-      "Agora o vendedor precisa conferir o recebimento do Pix."
+    
+      "  Total: "  +money(total)+""+
+      "  Agora o vendedor precisa conferir o recebimento do Pix."
     );
     cart=[];
     saveCart();
