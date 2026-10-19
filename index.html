@@ -130,6 +130,36 @@
 .product-img {
   background: #fff3d6;
 }
+
+  .reset-btn {
+  border: 1px solid #f58220;
+  background: #ffc928;
+  color: #593000;
+  padding: 11px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.reset-btn:hover {
+  background: #ffb900;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .reset-btn {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+}
   </style>
 </head>
 <body>
@@ -260,6 +290,23 @@
       cart.reduce((sum,item)=>sum+item.qtd,0);
   }
 
+
+  function resetShops() {
+  // Limpa a pesquisa
+  document.getElementById("search").value = "";
+
+  // Volta a mostrar todas as mini lojas e produtos
+  selectedShop = null;
+  renderShops();
+  renderProducts();
+
+  // Volta para o início da página
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+  
   function renderShops(){
     const box=document.getElementById("shops");
     box.innerHTML=lojas.map(loja=>`
