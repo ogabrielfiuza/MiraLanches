@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CampusFood — Marketplace da Turma</title>
+  <title>MiraLanches</title>
   <style>
-    :root{
-      --primary:#1d54ea;
-      --primary-dark:#c91422;
-      --bg:#f7f7f7;
-      --card:#fff;
-      --text:#222;
-      --muted:#777;
-      --border:#e8e8e8;
-      --green:#19a974;
-      --shadow:0 8px 24px rgba(0,0,0,.08);
-    }
+    :root {
+  --primary: #f58220;
+  --primary-dark: #d96800;
+  --bg: #fffaf0;
+  --card: #ffffff;
+  --text: #332719;
+  --muted: #827568;
+  --border: #f1dfc5;
+  --green: #19a974;
+  --shadow: 0 8px 24px rgba(160, 95, 0, .12);
+  --yellow: #ffc928;
+}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
     button{font:inherit;cursor:pointer}
@@ -28,11 +29,22 @@
     .cart-btn{margin-left:auto;border:0;background:var(--primary);color:white;padding:11px 16px;border-radius:10px;font-weight:bold}
     .cart-count{background:white;color:var(--primary);padding:2px 6px;border-radius:20px;margin-left:5px}
     main{max-width:1180px;margin:auto;padding:28px 20px 90px}
-    .hero{
-      background:linear-gradient(135deg,#fff1f2,#fff);
-      border-radius:20px;padding:30px;margin-bottom:25px;border:1px solid #ffe0e3;
-    }
-    .hero h1{font-size:32px;margin-bottom:8px}.hero p{color:var(--muted)}
+    .hero {
+  background: linear-gradient(135deg, #fff0cc, #fffaf0);
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border: 1px solid #ffdc85;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--muted);
+}
     .section-title{font-size:22px;margin:25px 0 14px}
     .shops{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:15px}
     .shop{
@@ -84,6 +96,40 @@
       header{gap:10px;padding:12px}.logo{font-size:20px}.search{min-width:0}.cart-btn{padding:10px}
       main{padding:18px 12px 70px}.hero{padding:22px}.hero h1{font-size:26px}
     }
+
+    .shop button,
+.copy {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.add-btn,
+.cart-btn {
+  background: var(--primary);
+  color: white;
+}
+
+.add-btn:hover,
+.cart-btn:hover {
+  background: var(--primary-dark);
+}
+
+.shop button:hover,
+.copy:hover {
+  background: #fff3d6;
+}
+
+.logo {
+  color: var(--primary);
+}
+
+.section-title {
+  color: #b85b00;
+}
+
+.product-img {
+  background: #fff3d6;
+}
   </style>
 </head>
 <body>
