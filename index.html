@@ -512,8 +512,9 @@ body.dark-mode .cart-count {
     const total=cart.reduce((sum,item)=>sum+item.preco*item.qtd,0);
     const loja=lojas.find(l=>l.id===cart[0].shopId);
     alert(
-      "Pedido registrado!"
-      "Total: "+money(total)"
+      "Pedido registrado!"+
+      "Loja: "+loja.nome+"\\n"+
+      "Total: "+money(total)+"\\n\\"+
       "Agora o vendedor precisa conferir o recebimento do Pix."
     );
     cart=[];
