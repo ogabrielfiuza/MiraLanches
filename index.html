@@ -317,13 +317,13 @@ body.dark-mode .cart-count {
       id: 1,
       nome: "Doces da Ana",
       descricao: "Brownie, brigadeiro e doces caseiros",
-      emoji: "🍫",
+      imagem: "🍫",
       pix: "ana@exemplo.com",
       qr: "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=ana%40exemplo.com",
       produtos: [
-        {id:101,nome:"Brownie",descricao:"Brownie de chocolate garoto",preco:6.00,emoji:"🍫"},
-        {id:102,nome:"Brigadeiro",descricao:"Briagadeiro de chocolate nestle ",preco:3.50,emoji:"🍬"},
-        {id:103,nome:"Cookie",descricao:"Cookie com gotas de chocolate milka",preco:5.00,emoji:"🍪"}
+        {id:101,nome:"Brownie",descricao:"Brownie de chocolate garoto",preco:6.00,imagem:"🍫"},
+        {id:102,nome:"Brigadeiro",descricao:"Briagadeiro de chocolate nestle ",preco:3.50,imagem:"🍬"},
+        {id:103,nome:"Cookie",descricao:"Cookie com gotas de chocolate milka",preco:5.00,imagem:"🍪"}
       ]
     },
     {
@@ -334,22 +334,22 @@ body.dark-mode .cart-count {
       pix: "11999999999",
       qr: "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=11999999999",
       produtos: [
-        {id:201,nome:"Torta de pão",descricao:"Ingredientes: Pão de forma, Presunto, Queijo muçarela, Molho de tomate, Maionese, Tomate e Orégano",preco:12.00,},
-        {id:202,nome:"X-Salada",descricao:"Hambúrguer, queijo, tomate, alface e milho",preco:14.00,emoji:"🥪"},
-        {id:203,nome:"Batata",descricao:"Porção de 150g",preco:7.00,emoji:"🍟"}
+        {id:201,nome:"Torta de pão",descricao:"Ingredientes: Pão de forma, Presunto, Queijo muçarela, Molho de tomate, Maionese, Tomate e Orégano",preco:12.00,imagem:<img src="Torta.png">},
+        {id:202,nome:"X-Salada",descricao:"Hambúrguer, queijo, tomate, alface e milho",preco:14.00,imagem:"🥪"},
+        {id:203,nome:"Batata",descricao:"Porção de 150g",preco:7.00,imagem:"🍟"}
       ]
     },
     {
       id: 3,
       nome: "Bebidas da Bia",
       descricao: "Bebidas geladas para o intervalo",
-      emoji: "🥤",
+      imagem: "🥤",
       pix: "21988888888",
       qr: "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=21988888888",
       produtos: [
-        {id:301,nome:"Refrigerante",descricao:"Coca Cola Lata 350 ml",preco:5.00,emoji:"🥤"},
-        {id:302,nome:"Suco",descricao:"Suco de maracujá natural",preco:6.00,emoji:"🧃"},
-        {id:303,nome:"Água",descricao:"Água mineral",preco:3.00,emoji:"💧"}
+        {id:301,nome:"Refrigerante",descricao:"Coca Cola Lata 350 ml",preco:5.00,imagem:"🥤"},
+        {id:302,nome:"Suco",descricao:"Suco de maracujá natural",preco:6.00,imagem:"🧃"},
+        {id:303,nome:"Água",descricao:"Água mineral",preco:3.00,imagem:"💧"}
       ]
     }
   ];
@@ -443,7 +443,7 @@ body.dark-mode .cart-count {
 
     const existing=cart.find(i=>i.id===productId && i.shopId===shopId);
     if(existing) existing.qtd++;
-    else cart.push({id:productId,shopId,nome:produto.nome,preco:produto.preco,emoji:produto.emoji,qtd:1});
+    else cart.push({id:productId,shopId,nome:produto.nome,preco:produto.preco,imagem:produto.emoji,qtd:1});
 
     saveCart();
     alert(produto.nome+" foi adicionado ao carrinho!");
