@@ -143,7 +143,7 @@ body.dark-mode .cart-count {
     .modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
     .close{border:0;background:#eee;width:36px;height:36px;border-radius:50%}
     .cart-item{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid var(--border)}
-    .cart-item .emoji{font-size:30px}.cart-info{flex:1}.cart-info small{color:var(--muted)}
+    .cart-item .imagem{font-size:30px}.cart-info{flex:1}.cart-info small{color:var(--muted)}
     .qty{display:flex;align-items:center;gap:7px}.qty button{border:0;background:#eee;border-radius:7px;width:28px;height:28px}
     .total{display:flex;justify-content:space-between;font-size:20px;font-weight:900;margin:20px 0}
     .checkout{width:100%;border:0;background:var(--green);color:white;padding:14px;border-radius:11px;font-weight:bold}
@@ -390,7 +390,7 @@ body.dark-mode .cart-count {
     const box=document.getElementById("shops");
     box.innerHTML=lojas.map(loja=>`
       <article class="shop">
-        <div class="shop-icon">${loja.emoji}</div>
+        <div class="shop-icon">${loja.imagem}</div>
         <h3>${loja.nome}</h3>
         <p>${loja.descricao}</p>
         <button onclick="showShop(${loja.id})">Ver produtos →</button>
@@ -406,7 +406,7 @@ body.dark-mode .cart-count {
     }
     box.innerHTML=list.map(p=>`
       <article class="product">
-        <div class="product-img">${p.emoji}</div>
+        <div class="product-img">${p.imagem}</div>
         <div class="product-body">
           <small style="color:#ea1d2c;font-weight:bold">${p.shopName}</small>
           <h3>${p.nome}</h3>
@@ -443,7 +443,7 @@ body.dark-mode .cart-count {
 
     const existing=cart.find(i=>i.id===productId && i.shopId===shopId);
     if(existing) existing.qtd++;
-    else cart.push({id:productId,shopId,nome:produto.nome,preco:produto.preco,imagem:produto.emoji,qtd:1});
+    else cart.push({id:productId,shopId,nome:produto.nome,preco:produto.preco,imagem:produto.imagem,qtd:1});
 
     saveCart();
     alert(produto.nome+" foi adicionado ao carrinho!");
@@ -462,7 +462,7 @@ body.dark-mode .cart-count {
     }else{
       box.innerHTML=cart.map((item,index)=>`
         <div class="cart-item">
-          <div class="emoji">${item.emoji}</div>
+          <div class="imagem">${item.imagem}</div>
           <div class="cart-info">
             <strong>${item.nome}</strong><br>
             <small>${money(item.preco)} cada</small>
